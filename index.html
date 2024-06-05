@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunting API</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <h2 class="nav-title">Hot Gadgets</h2>
+        <button class="btn btn-primary">Sign Up</button>
+    </nav>
+    <header>
+        <section class="header-section">
+            <h1 class="header-title">Apple Iphone 13 Pro Max</h1>
+            <p class="header-description">
+                There are many variations of passages of Lorem Ipsum available, but
+                the majority <br> have suffered alteration in some form, by injected humou.
+            </p>
+            <div class="flex-center">
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </section>
+        <section>
+            <div class="image-gallery">
+                <img src="./phone2.png" alt="">
+                <img src="./phone1.png" alt="">
+                <img src="./phone2.png" alt="">
+            </div>
+        </section>
+        <h1 class="search-title">Search Your Phone</h1>
+    </header>
+    <main>
+        <!-- search btn -->
+        <section class="search-section">
+            <input id="searchField" type="text" placeholder="e.g. oppo, samsung, iphone" class="input">
+            <button onclick="searchHandler()" class="btn btn-primary">Search</button>
+        </section>
+        <!-- phone card -->
+        <section>
+            <div class="loading hidden" id="loading">
+                <h1>Searching</h1>
+                <span class="loading-ring"></span>
+            </div>
+            <div id="phone-container" class="phone-container"></div>
+        </section>
+        <div class="hidden flex-center my-8" id="showALLBtn">
+            <button onclick="showBtn()" class="btn btn-primary">Show All</button>
+        </div>
+        <!-- Modals -->
+        <section>
+            <dialog id="my_modal" class="modal">
+                <form method="dialog" class="modal-box text-center">
+                    <div id="imgContainer" class="flex-center"></div>
+                    <h3 id="detailsPhoneName" class="modal-title"></h3>
+                    <h3 id="detailsBrand" class="modal-subtitle"></h3>
+                    <p id="detailsSpec"></p>
+                    <p id="releaseDate" class="my-2"></p>
+                    <div class="modal-action flex-center">
+                        <button class="btn btn-danger">Close</button>
+                    </div>
+                </form>
+            </dialog>
+        </section>
+    </main>
+    <!-- Script -->
+    <script src="./script.js"></script>
+</body>
+</html>
